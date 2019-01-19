@@ -32,18 +32,18 @@ function draw() {
   
   background(0);
   
-  vidHeight = windowHeight;
-  vidWidth = windowHeight * 1.5;
+  vidHeight = windowHeight * 3;
+  vidWidth = vidHeight * 1.5;
   
   
   // display variables
   
   
-  vid.position(gamma*4, beta*4);
+  vid.position(gamma*4 - vidWidth/2 , beta*4 - vidHeight/2);
   //vid.size(vidWidth, vidHeight * 0.666666666666);
   vid.size(vidWidth, vidWidth * 0.666666666666);
   
-  fill(100);
+  /*fill(100);
   noStroke();
   fill(255);
   text("alpha: " + alpha, 25, 25);
@@ -57,7 +57,7 @@ function draw() {
   rect(gamma*4, beta*4, 80, 80);
   fill(255);
   rect(gamma*4, beta*4, 80, 5);
-  pop();
+  pop();*/
   
 }
 function windowResized() {
