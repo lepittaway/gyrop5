@@ -47,14 +47,14 @@ function draw() {
   // display variables
   
   cgamma = constrain(gamma, -88, 88);
-  cbeta = constrain(beta, -88, 88);
+  cbeta = constrain(beta, 0, 178);
   
   
   vid.position(cgamma*4 - vidWidth/2 , cbeta*4 - vidHeight/2);
   div1.position(10, 10);
-  div1.html('beta: ' + beta);
+  div1.html('beta -- ' + beta);
   div2.position(10, 30);
-  div2.html('gamma: ' + gamma);
+  div2.html('gamma -- ' + gamma);
   //vid.size(vidWidth, vidHeight * 0.666666666666);
   vid.size(vidWidth, vidWidth * 0.666666666666);
   
