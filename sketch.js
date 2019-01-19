@@ -3,14 +3,20 @@ var xpos, ypos;
 
 var moveX;
 
-var vid;
+var vid, div1, div2;
 var vidWidth, vidHeight;
 
 function setup()  {
   // set canvas size
+  
   createCanvas(windowWidth, windowHeight);
   
   vid = createVideo('assets/videos/sphere.mp4');
+  div1 = createDiv('');
+  div2 = createDiv('');
+  
+  
+  
   vid.play();
   vid.loop();
   
@@ -40,6 +46,10 @@ function draw() {
   
   
   vid.position(gamma*4 - vidWidth/2 , beta*4 - vidHeight/2);
+  div1.position(10, 10);
+  div1.html('beta: ' + beta);
+  div2.position(10, 30);
+  div2.html('gamma: ' + gamma);
   //vid.size(vidWidth, vidHeight * 0.666666666666);
   vid.size(vidWidth, vidWidth * 0.666666666666);
   
