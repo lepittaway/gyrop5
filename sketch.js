@@ -6,6 +6,8 @@ var moveX;
 var vid, div1, div2;
 var vidWidth, vidHeight;
 
+var cgamma, cbeta;
+
 function setup()  {
   // set canvas size
   
@@ -38,14 +40,17 @@ function draw() {
   
   background(0);
   
-  vidHeight = windowHeight * 3;
+  vidHeight = windowHeight * 2;
   vidWidth = vidHeight * 1.5;
   
   
   // display variables
   
+  cgamma = constrain(gamma, -88, 88);
+  cbeta = constrain(beta, -88, 88);
   
-  vid.position(gamma*4 - vidWidth/2 , beta*4 - vidHeight/2);
+  
+  vid.position(cgamma*4 - vidWidth/2 , cbeta*4 - vidHeight/2);
   div1.position(10, 10);
   div1.html('beta: ' + beta);
   div2.position(10, 30);
