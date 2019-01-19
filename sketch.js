@@ -4,6 +4,7 @@ var xpos, ypos;
 var moveX;
 
 var vid;
+var vidWidth, vidHeight;
 
 function setup()  {
   // set canvas size
@@ -30,7 +31,17 @@ function draw() {
   
   
   background(0);
+  
+  vidWidth = windowWidth;
+  vidHeight = vidWidth * 0.66666666666;
+  
   // display variables
+  
+  
+  vid.position(gamma*4, beta*4);
+  //vid.size(vidWidth, vidHeight * 0.666666666666);
+  vid.size(vidWidth, vidWidth * 0.666666666666);
+  
   fill(100);
   noStroke();
   fill(255);
@@ -39,21 +50,18 @@ function draw() {
   text("gamma: " + gamma, 25, 75);
   
   push();
-  translate(200, 200);
-  //rotate(radians(gamma));
+  //translate(200, 200);
+  
   fill(0, 0, 255);
   rect(gamma*4, beta*4, 80, 80);
   fill(255);
   rect(gamma*4, beta*4, 80, 5);
   pop();
   
-  vid.position(gamma*4, beta*4);
-  
-  //image(vid, 10, 10);
-  //vid.position(gamma*4, beta*4);
-  
 }
-
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
 // accelerometer Data
 window.addEventListener('deviceorientation', function(e) 
 {
