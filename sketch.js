@@ -32,8 +32,9 @@ function draw() {
   
   background(0);
   
-  vidWidth = windowWidth;
-  vidHeight = vidWidth * 0.66666666666;
+  vidHeight = windowHeight;
+  vidWidth = windowHeight * 1.5;
+  
   
   // display variables
   
